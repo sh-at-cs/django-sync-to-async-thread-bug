@@ -10,7 +10,6 @@ import time
 def f():
     print("enter f()")
     print(f"sync_to_async()-wrapped f() in thread: {threading.get_ident()}")
-    print(threading.get_ident())
     time.sleep(10)
     print("exit f()")
 
