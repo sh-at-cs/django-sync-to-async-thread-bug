@@ -17,7 +17,7 @@ def f():
 
 class MyView(View):
     async def get(self, *a, **kw):
-        print("request handled in thread: {threading.get_ident()}")
+        print(f"request handled in thread: {threading.get_ident()}")
         await sync_to_async(f, thread_sensitive=True)()
         return HttpResponse("")
 
